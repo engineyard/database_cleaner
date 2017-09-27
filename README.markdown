@@ -266,11 +266,11 @@ Sometimes you need to use multiple ORMs in your application.
 You can use DatabaseCleaner to clean multiple ORMs, and multiple connections for those ORMs.
 
 ```ruby
-#How to specify particular orms
+# How to specify particular orms
 DatabaseCleaner[:active_record].strategy = :transaction
 DatabaseCleaner[:mongo_mapper].strategy = :truncation
 
-#How to specify particular connections
+# How to specify particular connections
 DatabaseCleaner[:active_record,{:connection => :two}]
 
 # You may also pass in the model directly:
